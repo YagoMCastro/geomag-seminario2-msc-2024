@@ -286,50 +286,84 @@ $h_{l}^{m}(t)=\sum_{k}^{N_spl} h_{l}^{mk} B_k (t) $
 
 ===============================================================================
 
+# Comparações entre modelos
 
+- Comparação do campo radial não axial médio (NAD) na fronteira manto-núcleo:
+  - Os modelos são concordantes para grandes escalas;
+  - Diferenças significativas em detalhes menores, especialmente na Austrália/Sudeste Asiático.
+  - Problemas de orientação de declinação afetam o modelo CALS10k.1b.
+  - Estruturas médias NAD mostram campos positivos em baixas latitudes e negativos em altas latitudes.
+  - Regiões equatoriais e de baixas latitudes são mais consistentes entre os modelos.
+
+===============================================================================
+
+# Comparações entre modelos
+- Comparação do campo radial não axial médio (NAD) na fronteira manto-núcleo:
+  - Média NAD concorda bem com pfm9k.1a e CALS10k.1b, exceto na região Austrália/Indonésia/Pacífico Oeste.
+  - Modelo SHA.DIF.14k mostra diferenças claras em relação aos outros modelos.
+  - Maior variabilidade no campo NAD médio é encontrada na região polar norte, Antártica Ocidental e Sul da América do Sul.
+  - Campo NAD no polo norte varia entre os modelos, com algumas inconsistências.
 
 ===============================================================================
 
-
-
-===============================================================================
-
-
+<img style="width: 70%;" src="assets/figure8.png">
 
 ===============================================================================
 
+<img style="width: 100%;" src="assets/figure9.png">
 
 
 ===============================================================================
-<!-- .slide: class="slide-contact" data-background-image="assets/contact-slide.svg" data-background-size="contain" data-background-color="#000000" -->
+# Conclusões
+
+- Seis novos modelos de campo geomagnético para o Holoceno foram construídos, baseados em dados paleomagnéticos e arqueomagnéticos.
+- Modelos previamente publicados, CALS10k.1b e pfm9k.1a, foram incluídos nas comparações.
+- Modelos são mais sensíveis à ponderação relativa dos dados e ao escalonamento da intensidade relativa e offsets de declinação do que às diferenças na metodologia de modelagem.
+
+===============================================================================
+# Conclusões
+
+- A recuperação da força absoluta do dipolo axial (DM) permanece um desafio devido à escassez de dados de intensidade absoluta.
+- Registros de sedimentos são essenciais para descrever a variabilidade regional do campo antes de 1000 a.C., mas requerem ajuste de orientação e escalonamento de intensidade relativa (RPI).
+- As intensidades arqueomagnéticas podem ser enviesadas devido a correções inadequadas de magnetização termorremanente (TRM).
+- Ajustes de orientação podem ser enviesados pela suposição inicial de dipolo axial geocêntrico (GAD) em áreas com poucos dados de declinação.
+- Estimativas de incerteza dos dados são cruciais para determinar estruturas de campo confiáveis e variações.
+
+===============================================================================
+# Conclusões
+- O tratamento adequado das incertezas de idade nos registros de sedimentos permanece um desafio.
+- A escolha dos parâmetros de regularização e ponderação dos dados determina a quantidade de estrutura espacial e temporal nos modelos.
+- A rejeição de outliers é importante para a criação de modelos consistentes.
+- A qualidade dos dados e a disponibilidade de estimativas realistas de incerteza são mais importantes que os detalhes das escolhas de modelagem.
+- Mais dados são necessários, especialmente no hemisfério sul e em períodos mais antigos, para melhorar a cobertura e resolver ambiguidades.
+
+
+===============================================================================
+<!-- .slide: class="slide-contact" data-background-image="assets/background-faded.svg" data-background-size="contain" data-background-color="#000000" -->
+
 
 <div class="r-stretch centered">
 <div>
 
 <i class="fas fa-comments"></i>
 <br>
-Contact:
-<a href="https://www.leouieda.com">www.leouieda.com</a>
+Contato:
+<a href="yagomcastro@usp.br">yagomcastro@usp.br</a>
 
 <i class="fab fa-github"></i>
 <br>
-Source code for this presentation:
+Código-fonte para esta apresentação:
 <br>
-[github.com/leouieda/talk-template](https://github.com/leouieda/talk-template)
+[github.com/YagoMCastro/geomag-seminario2-msc-2024](https://github.com/YagoMCastro/geomag-seminario2-msc-2024)
 
 <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i>
 <br>
-Unless otherwise noted,
-the contents of this presentation are
-licensed under the
+
+Salvo indicação em contrário,
+o conteúdo desta apresentação está
+licenciado sob a
 <br>
 [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 </div>
-</div>
-<div class="footnote-left dark">
-
-The background image is a Landsat 9 scene of the city of São Paulo, Brazil,
-showing the USP campus in the center.
-
 </div>
