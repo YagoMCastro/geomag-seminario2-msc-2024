@@ -192,7 +192,7 @@ $h_{l}^{m}(t)=\sum_{k}^{N_spl} h_{l}^{mk} B_k (t) $
 
 ===============================================================================
 
-# Inversão
+# Erro
 
 - Dados arqueomagnéticos e paleomagnéticos são coletados usando vários métodos de laboratório.
 - A ausência de um procedimento padrão para estimar incertezas torna difícil caracterizar os erros dos dados estatisticamente.
@@ -203,70 +203,104 @@ $h_{l}^{m}(t)=\sum_{k}^{N_spl} h_{l}^{mk} B_k (t) $
 <img style="width: 100%;" src="assets/figure2.png">
 
 ===============================================================================
-<div class="row">
-<div class="col tiny">
 
-<img src="assets/japan-trench-globalcmt.png">
-
-This way the image is narrow so it should be in a smaller column.
-
-</div>
-<div class="col-medium">
-
-# Column sizes
-
-Columns come in 3 sizes:
-
-1. `col`
-1. `col-medium`
-1. `col-large`
-
-These are more proportions than fixed sizes.
-
-</div>
-</div>
+# Resultados: Modelos de Campo de Holoceno
 
 ===============================================================================
 
-# Code
+# Propriedades globais dos modelos
 
-Example of using PyGMT to make a map:
-
-<div class="row">
-<div class="col-large fragment small">
-
-This code:
-
-```python
-import pygmt
-
-# Load built-in topography data
-grid = pygmt.datasets.load_earth_relief()
-
-fig = pygmt.Figure()
-# Pseudo-color map of topography
-fig.basemap(
-    region=[-150, -30, -60, 60],
-    projection="I-90/6i",
-    frame=True,
-)
-fig.grdimage(grid=grid, cmap="viridis")
-# Mask continents in dark grey
-fig.coast(land="#333333")
-# Display in Jupyter or pop-up window
-fig.show()
-```
-</div>
-<div class="col-medium fragment small">
-
-Makes this map 👇
-
-<img style="width: 90%" src="assets/pygmt-example.png">
-
-</div>
+- Modelo CALS10k.1b: Suavizado por médias de bootstrap, baixo poder espacial e resolução temporal, desajustes elevados aos dados.
+- Modelos HFM e CALS: Espectros médios de coeficientes de larga escala são geralmente similares.
+- Comparação com modelos modernos e históricos: Modelos milenares têm resolução limitada e médias temporais afetando graus 4 e superiores.
+- Modelos HFM.OL1 e HFM.OL1c: Maior amortecimento resulta em menor complexidade espacial e rápida queda nos espectros acima do grau 4.
 
 ===============================================================================
 
+<img style="width: 100%;" src="assets/figure3.png">
+
+===============================================================================
+
+# Diferença em parâmetros dos modelos
+
+- As figuras a seguir comparam a evolução dos coeficientes dipolo e quadrupolo dos modelos HFM e CALS10k, junto aos CALS10k.1b e pfm9k.1a como referência;
+- A maior dispersão é vista nos coeficientes $g_{1}^{0}$, refletindo as diferenças nos fatores de escala RPI.
+- Não há diferenças sistemáticas e persistentes visíveis nos coeficientes dipolo e quadrupolo equatoriais.
+- O coeficiente $g_{2}^{2}$ de CALS10k.1b é  influenciado fortemente por registros australianos incorretamente orientados e inconsistências internas no Sudeste Asiático.
+
+===============================================================================
+
+<img style="width: 80%;" src="assets/figure4.png">
+
+===============================================================================
+
+
+<img style="width: 75%;" src="assets/figure5.png">
+
+===============================================================================
+
+# Variações Regionais
+
+- Os deslocamentos de declinação são geralmente mais consistentes e robustos entre os modelos, com diferenças da ordem de apenas alguns graus a partir de um modelo inicial de dipolo axial.
+- CALS10k.1b tratou os valores de declinação como absolutos, sem tratamento relativo.
+- Algumas séries de declinação, como BAR na Austrália, apresentaram grandes deslocamentos devido à falta de verificação e ajuste de orientação nos modelos CALS3k.4 e CALS10k.1b.
+- Grandes dispersões ocorrem naturalmente em regiões de altas latitudes próximas aos polos magnéticos, como na Península Antártica e Mar de Beaufort.
+
+
+===============================================================================
+
+# Discussões
+
+===============================================================================
+
+# Comparação entre previsão de modelos e dados locais
+
+- A figura a seguir mostra exemplos de previsões dos modelos e ajuste aos dados para locais na Europa Central (EIF), Havaí (WAI), Austrália (GNO) e China (ERH).
+- Todos os modelos concordam bem na Europa Central, onde há boa cobertura de dados arqueomagnéticos e sedimentares.
+- No Havaí, todos os modelos, exceto CALS10k.1b, concordam na maior parte do tempo, com discrepâncias em intervalos curtos.
+- Na Austrália, o modelo HFM.OL1c e CALS10k.1b mostram um claro deslocamento na declinação que não é compatível com o modelo de declinação média zero.
+
+===============================================================================
+
+# Comparação entre previsão de modelos e dados locais
+
+- Na China, onde há suspeitas de influência de conjuntos de dados internamente inconsistentes, os modelos preveem resultados bastante semelhantes, com CALS10k.1b novamente sendo a exceção na inclinação.
+- Nenhum dos modelos prevê a tendência de longo prazo mostrada pelos dados paleomagnéticos sedimentares entre 4400 a.C. e 2000 a.C. na declinação, considerando essa parte do registro incompatível com os dados regionais e globais restantes.
+
+
+===============================================================================
+
+<img style="width: 85%;" src="assets/figure6.png">
+
+===============================================================================
+
+# Europa
+  - Entre 2000 a.C. e 6000 a.C., há inconsistências nos dados de idade, com modelos concordando melhor com registros como Eifel Maars (EIF) e Furskogstjärnet (FUR), mas menos claramente com Nautajärvi (NAU) e Lagos Finlandeses (FIN).
+  - O modelo SHA.DIF.14k mostra alta variabilidade em torno de 4500 a.C., não suportada por registros paleomagnéticos sedimentares.
+  - Em 7000 a.C., há um mínimo claro de inclinação consistentemente mostrado pelos registros, previsto por pfm9k.1a e CALS10k.OL2c, mas não por SHA.DIF.14k devido à escassez de dados naquela época.
+  - A falta de dados no SHA.DIF.14k implica que variações regionais não são resolvidas na metade inicial do modelo, podendo distorcer previsões de inclinação do dipolo.
+
+===============================================================================
+
+<img style="width: 46%;" src="assets/figure7.png">
+
+===============================================================================
+
+
+
+===============================================================================
+
+
+
+===============================================================================
+
+
+
+===============================================================================
+
+
+
+===============================================================================
 <!-- .slide: class="slide-contact" data-background-image="assets/contact-slide.svg" data-background-size="contain" data-background-color="#000000" -->
 
 <div class="r-stretch centered">
