@@ -11,9 +11,10 @@ The reveal.js configuration can be found in index.html
 <div class="r-stretch">
 </div>
 
-<h1 id="talk-title">
-  Litosfera: Química e Geofísica
-</h1>
+<h3 id="talk-title">
+  Limitations in paleomagnetic data and modelling techniques
+and their impact on Holocene geomagnetic field models
+</h3>
 <p id="talk-authors">
   <a>Yago Moreria Castro</a>
 </p>
@@ -23,9 +24,9 @@ The reveal.js configuration can be found in index.html
 <div class="col-large">
 
 <i class="fa fa-calendar-alt" style="margin: 0 10px 0 0"></i>
-11 de Junho de 2024
+21 de Junho de 2024
 <span style="margin: 0 20px"></span>
-Seminário de Introdução à Tectônica de Global
+Seminário de Introdução ao Geomagnetismo
 
 <!-- Permission to reuse and CC-BY license logo -->
 <i class="fa fa-camera" style="margin: 0 10px 0 0"></i>
@@ -48,116 +49,101 @@ Sinta-se à vontade para tirar capturas de tela/compartilhar/reutilizar esta apr
 </div>
 
 ===============================================================================
+# Introdução
+<h2 style="text-align: justify;">Modelos Globais do Campo Geomagnético</h2>
 
-# Heading 1
+- Modelos são criados há 400 anos (Jackson et al. 2000);
 
-This is a slide with some content.
+- Permitem o mapeamento da evolução da estrutura do campo na superfície do núcleo da Terra.
 
-## Heading 2
+- Usados para análises de variações globais e regionais do campo.
 
-* Bla bla
-* Bla bla
+<h2 style="text-align: justify">Fontes de Dados Utilizadas</h2>
 
-### Heading 3
-
-Meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh
-meh meh.
-
-===============================================================================
-
-<div class="r-stretch">
-
-# Some facts
-
-About a certain topic.
-
-</div>
-<div class="footnote">
-
-This is a little footnote.
-Use it to add notes, citations, [links](https://www.leouieda.com/), etc.
-<br>
-Notice how the `div` above uses `r-stretch` to push this note to the bottom.
-
-</div>
+- <p style="text-align: justify;">Compilações de direções e intensidades do campo obtidas de artefatos arqueológicos, lavas e sedimentos. Em comparação com dados observacionais modernos ou históricos
+</p>
 
 ===============================================================================
 
-<div class="r-stretch centered">
-<div>
+# Desafios Encontrados
 
-# Even more facts!
+- Dados arqueomagnéticos e paleomagnéticos contêm incertezas consideráveis.
 
-About many different things.
+  - Essas incertezas frequentemente não são bem compreendidas.
 
-</div>
-</div>
-<div class="footnote-left">
+  - As incertezas afetam não apenas os valores dos campos magnéticos, mas também suas idades.
 
-Left aligned footnote.
-Use `centered` on the `div` above to vertically center content.
-<br>
-Need to put another `div` inside of it as well.
+- A distribuição global desses dados é muito heterogênea.
 
-</div>
+===============================================================================
+# Metodologias de Modelagem
+
+- Diversas metodologias de modelagem foram testadas com o objetivo dessas metodologias é avaliar as influências dessas limitações.
+
+# Série CALSx
+
+- Cobertura dos últimos 3, 7 e 10 mil anos;
+- Uso de expansões em harmônicos esféricos e funções base temporais de splines cúbicos;
+- Aplicação de métodos de regularização;
+- Objetivo: encontrar os modelos de complexidade mínima que se ajustem aos dados com a precisão desejada.
+
+===============================================================================
+# Licht et al. (2013)
+- <p style="text-align: justify;">Apresentou três conjuntos de modelos de campo de baixo grau harmônico esférico (truncados nos graus e ordens 5) que abrangem os últimos três milênios.</p>
+- <p style="text-align: justify;">Modelos construídos a partir de conjuntos de dados arqueomagnéticos, vulcânicos e sedimentares.</p>
+- <p style="text-align: justify;">Apenas características de baixo grau podem ser resolvidas com os conjuntos de dados disponíveis.</p>
+- <p style="text-align: justify;">Introduziram um erro de modelagem para contabilizar coeficientes de Gauss de ordem superior não modelados.</p>
+- <p style="text-align: justify;">Aumentaram o peso dos dados arqueomagnéticos em comparação com os dados sedimentares, devido a erros de cronometragem nestes últimos.</p>
 
 ===============================================================================
 
-<!-- .slide: data-background-image="assets/agu2019.svg" data-background-size="contain" data-background-color="#000000" -->
-
-<div class="r-stretch">
-</div>
-<div class="footnote-center dark">
-
-Centered footnote with a dark background on a slide with a background.
-<br>
-Set the size to `contain` to make sure aspect ratios are preserved and the
-background isn't cropped.
-<br>
-It's a good idea to add alt-text to this footnote if the background is
-important.
-
-</div>
+# Nilsson et al. (2014)
+- Considera questões de datação;
+- Apresentaram novos modelos de campo geomagnético cobrindo os últimos 9000 anos;
+- Utilizaram uma estratégia de modelagem nova;
+  - Utilização de registros sedimentares reamostrados temporalmente de forma uniforme;
+- Ajustes iterativos foram realizados nos escalonamentos dos registros sedimentares, considerando as incertezas nas idades.
 
 ===============================================================================
 
-<!-- .slide: data-background-video="assets/brasil-sao-paulo-rio.mp4" data-background-size="contain" data-background-color="#000000" -->
+# SHA.DIF.14k
 
-<div class="r-stretch">
-</div>
-<div class="footnote">
-
-This is how you use a video background.
-The video auto starts when flipping to this slide.
-
-</div>
+- Pavón-Carrasco et al. (2014b) propuseram um novo modelo de campo geomagnético holocênico;
+- Cobertura dos últimos 14000 anos;
+- Baseado exclusivamente em dados arqueomagnéticos e de fluxo de lava;
+- Evita o uso de registros sedimentares.
 
 ===============================================================================
 
-<!-- .slide: class="slide-transition" -->
+# Dados e Estimativas de Incertezas
 
-# A transition slide <br> with a large title
+<div class="row">
+  <div class="col">
 
-...and some text.
+  - CALS10k.1b foi construído usando dados paleomagnéticos que abrangem os últimos 10 mil anos.
+  - A cobertura de dados é consideravelmente limitada no Hemisfério Sul;
+  - Diferenças nos resultados são observadas devido ao tipo de dados utilizados (sedimentares vs arqueomagnéticos);
 
-===============================================================================
-
-# Maths
-
-This is an inline $\int_a^b x^2 dx$ and $\delta g = g - \gamma$:
-
-`\[ \int_a^b x^2 dx \]`
-
-===============================================================================
-
-<!-- .slide: data-background-image="assets/agu2019.svg" data-background-size="contain" data-background-opacity="0.3" data-background-color="#000000" -->
-
-<div class="quote">
-
-Big quote message with a faded background image.
-Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
-
+  </div>
+  <div class="col centered">
+      <img style="width: 150%;" src="assets/model-vp-vs.png">
+  </div>
 </div>
+
+
+===============================================================================
+
+# Dados e Estimativas de Incertezas
+
+- O conjunto completo de dados inclui 85.500 pontos:
+
+  - 4% sendo dados de declinação arqueomagnética;
+  - 6% de inclinação arqueomagnética;
+  - 5% de intensidade arqueomagnética absoluta.
+  - Os dados paleomagnéticos de sedimentos contribuem com:
+    - 35% para a declinação relativa;
+    - 37% para a inclinação;
+    - 13% para o Índice de Paleointensidade Relativa (RPI).
 
 ===============================================================================
 
