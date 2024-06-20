@@ -92,6 +92,10 @@ Sinta-se à vontade para tirar capturas de tela/compartilhar/reutilizar esta apr
 - <p style="text-align: justify;">Apresentou três conjuntos de modelos de campo de baixo grau harmônico esférico (truncados nos graus e ordens 5) que abrangem os últimos três milênios.</p>
 - <p style="text-align: justify;">Modelos construídos a partir de conjuntos de dados arqueomagnéticos, vulcânicos e sedimentares.</p>
 - <p style="text-align: justify;">Apenas características de baixo grau podem ser resolvidas com os conjuntos de dados disponíveis.</p>
+
+===============================================================================
+
+# Licht et al. (2013)
 - <p style="text-align: justify;">Introduziram um erro de modelagem para contabilizar coeficientes de Gauss de ordem superior não modelados.</p>
 - <p style="text-align: justify;">Aumentaram o peso dos dados arqueomagnéticos em comparação com os dados sedimentares, devido a erros de cronometragem nestes últimos.</p>
 
@@ -120,13 +124,13 @@ Sinta-se à vontade para tirar capturas de tela/compartilhar/reutilizar esta apr
 <div class="row">
   <div class="col">
 
-  - CALS10k.1b foi construído usando dados paleomagnéticos que abrangem os últimos 10 mil anos.
-  - A cobertura de dados é consideravelmente limitada no Hemisfério Sul;
-  - Diferenças nos resultados são observadas devido ao tipo de dados utilizados (sedimentares vs arqueomagnéticos);
+  - <p style="text-align: justify;">CALS10k.1b foi construído usando dados paleomagnéticos que abrangem os últimos 10 mil anos;</p>
+  - <p style="text-align: justify;">A cobertura de dados é consideravelmente limitada no Hemisfério Sul;</p>
+  - <p style="text-align: justify;">Diferenças nos resultados são observadas devido ao tipo de dados utilizados (sedimentares vs arqueomagnéticos);</p>
 
   </div>
   <div class="col centered">
-      <img style="width: 150%;" src="assets/model-vp-vs.png">
+      <img style="width: 150%;" src="assets/figure1.png">
   </div>
 </div>
 
@@ -147,131 +151,58 @@ Sinta-se à vontade para tirar capturas de tela/compartilhar/reutilizar esta apr
 
 ===============================================================================
 
-<!-- .slide: data-background-image="assets/agu2019.svg" data-background-size="contain" data-background-opacity="0.3" data-background-color="#ffffff" -->
+# Inconsistênicas
 
-<div class="quote dark">
+- Korte & Constable (2011) identificaram queda suspeita na amplitude do RPI do Lago Pepin, EUA, entre 1800 AD e 2000 AD no CALS3k.3;
+  - Diverge das informações históricas do campo magnético fornecidas pelo gufm1 (Jackson et al. 2000).
+  - Parte do registro do Lago Pepin foi excluída antes da modelagem.
 
-Light fade of the background with a dark quote.
+- <p style="text-align: justify;">O registro do Lago Biwa (BIW) (Ali et al. 1999) foi substituído por um novo registro do mesmo lago (BI2) (Hayashida et al. 2007) nos modelos CALS10k.1b (Korte et al. 2011) e pfm9k (Nilsson et al. 2014).</p>
 
-</div>
-
-===============================================================================
-
-# Two column layout
-
-<div class="row">
-<div class="col">
-
-## Theory
-
-Explain something here.
-This is how you make a FontAwesome list:
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"> <i class="fa fa-lightbulb fa-fw"></i> </span>
-Make a list with
-</li>
-
-<li>
-<span class="fa-li"> <i class="fa fa-file-alt fa-fw"></i> </span>
-some awesome icons
-</li>
-
-<li>
-<span class="fa-li"> <i class="fa fa-users fa-fw"></i> </span>
-instead of bullet points
-</li>
-
-</ul>
-
-</div>
-<div class="col tiny">
-
-<img src="assets/halfspace-temperature.png">
-
-Some text explaining the figure.
-Maybe even a bit of maths like $\gamma$.
-
-</div>
-</div>
-
-<div class="footnote">
-
-Good place for a citation or image credit.
-This one is by Leonardo Uieda (CC-BY).
-
-</div>
 
 ===============================================================================
 
-<div class="r-stretch centered">
-<div>
-
-# Multiple columns
-
-Place as many `col`s as you want. They will have the same size.
-
-<div class="row">
-<div class="col">
-
-Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla.
-
-</div>
-<div class="col tiny">
-
-<img src="assets/nbr_thomas_fire.jpg">
-
-Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla.
-
-</div>
-<div class="col tiny">
-
-<img src="assets/halfspace-temperature.png">
-
-Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla.
-
-</div>
-</div>
-
-</div>
-</div>
-<div class="footnote">
-
-Images by Leonardo Uieda (CC-BY).
-
-</div>
+# Metodologia de Modelagem de Campo
 
 ===============================================================================
 
-# This one has columns of different size
 
-<div class="row">
-<div class="col-large tiny">
+## Modelagem direta e parametrização
 
-<img style="width: 95%;" src="assets/nbr_thomas_fire.jpg">
+$ V(r, \theta, \phi) =    a \sum_{l=1}^{L} \sum_{m=0}^{l} \left( \frac{a}{r} \right)^{l+1} [g_{l}^{m} \cos(m\phi)+ h_{l}^{m} \sin(m\phi)] P_{l}^{m}$
 
-This way the image is larger on the screen. Use it for maps or main figures.
+- A modelagem da evolução temporal do campo geomagnético requer uma expansão adicional dos coeficientes de Gauss \( $g_{l}^{m}$ \) e \( $h_{l}^{m}$ \) no tempo.
+- Para isso, é adotada uma base de B-splines cúbicos.
 
-</div>
-<div class="col small">
+$g_{l}^{m}(t)=\sum_{k}^{N_spl} g_{l}^{mk} B_k (t) $
 
-Explain what is shown on the image.
-Use the `small` class to adjust font size.
 
-Maybe include some maths:
-
-$ D\dfrac{\partial^4 w}{\partial x^4} = q - g (\rho_m - \rho_w) w $
-
-</div>
-</div>
+$h_{l}^{m}(t)=\sum_{k}^{N_spl} h_{l}^{mk} B_k (t) $
 
 ===============================================================================
 
+## Modelagem direta e parametrização
+
+- Modelos usam grau harmônico esférico máximo de $L=10$ e espaçamento de pontos de nó temporais de 40 anos;
+  - Mesma parametrização de Korte et al. (2011).
+  - Permitem mais estrutura espacial e temporal do que os dados resolvem.
+
+- Regularização espacial e temporal evita ajuste excessivo;
+  - Garante que a resolução do modelo seja determinada pela informação nos dados e não por uma escolha arbitrária de truncamento da expansão harmônica esférica ou espaçamento dos pontos de nó das splines.
+
+===============================================================================
+
+# Inversão
+
+- Dados arqueomagnéticos e paleomagnéticos são coletados usando vários métodos de laboratório.
+- A ausência de um procedimento padrão para estimar incertezas torna difícil caracterizar os erros dos dados estatisticamente.
+- Comparações entre conjuntos de dados iniciais e finais e todos os modelos derivados indicam que os erros dos dados são mais bem representados por uma distribuição Laplaciana do que por uma Gaussiana.
+
+===============================================================================
+
+<img style="width: 100%;" src="assets/figure2.png">
+
+===============================================================================
 <div class="row">
 <div class="col tiny">
 
