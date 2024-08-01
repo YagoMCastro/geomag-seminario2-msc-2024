@@ -4,8 +4,7 @@
 **Preview:** https://yagomcastro.github.io/geomag-seminario2-msc-2024/
 
 > A template by Leonardo Uieda was used to create this presentation:
-> https://[github.com/matthewturk/mjt-talk-template
-](https://github.com/leouieda/talk-template)
+> https://github.com/leouieda/talk-template
 
 ## Using as template
 
