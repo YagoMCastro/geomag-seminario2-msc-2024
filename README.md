@@ -1,5 +1,5 @@
 # Slides for a seminar using reveal.js
-
+**Title:** Limitations in paleomagnetic data and modelling techniques and their impact on Holocene geomagnetic field models
 
 **Preview:** https://yagomcastro.github.io/geomag-seminario2-msc-2024/
 
